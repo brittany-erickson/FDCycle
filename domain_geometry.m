@@ -1,9 +1,9 @@
 function D = domain_geometry()
 
-D.Lz = 24; %(km) z in [0, L_z]
-D.Ly = 24; %(km) length of fault, y in [0, L_y]
+D.Lz = 3; %(km) z in [0, L_z]
+D.Ly = 3; %(km) length of fault, y in [0, L_y]
 D.H = .5*D.Lz; %This is the depth at which (a-b) begins to increase.
-D.Nz = 201; 
+D.Nz = 4; 
 D.Ny = D.Nz; 
 D.N = D.Nz*D.Ny;
 D.dy = D.Ly/(D.Ny-1); %(km)

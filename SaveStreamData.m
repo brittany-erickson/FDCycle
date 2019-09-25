@@ -1,4 +1,7 @@
 function varargout = SaveStreamData(fn,varargin)
+
+%written by Andrew Bradley (ambradl@sandia.gov)
+
 % Functions to save a stream of data to a file. The data should be
 % column-oriented, so that one is building a wide matrix by appending colums.
 % 

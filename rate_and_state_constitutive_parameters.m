@@ -13,8 +13,8 @@ p.cs_inside = sqrt(36/2.8); %2.5;
 p.cs_outside = sqrt(36/2.8);
 p.rho_inside = 2.8; %2.56; 
 p.rho_outside = 2.8;
-p.g_min = p.cs_inside^2*p.rho_inside;
-p.g_max = p.cs_outside^2*p.rho_outside;
+p.g_min = 1; %p.cs_inside^2*p.rho_inside;
+p.g_max = 1; %p.cs_outside^2*p.rho_outside;
 
 
 %%%%%%  Frictional Parameters %%%%%%%

@@ -14,8 +14,8 @@ N = Ny*Nz;
 Sz(1,:) = -Sz(1,:);
 Sy(1,:) = -Sy(1,:);
 
-Dz(1,:) = Sz(1,:); Dz(end,:) = Sz(end,:);
-Dy(1,:) = Sy(1,:); Dy(end,:) = Sy(end,:);
+%Dz(1,:) = Sz(1,:); Dz(end,:) = Sz(end,:);
+%Dy(1,:) = Sy(1,:); Dy(end,:) = Sy(end,:);
 Dy = (1/dy).*Dy; Dz = (1/dz).*Dz; 
 Sy = (1/dy).*Sy; Sz = (1/dz).*Sz;
 Hinvy = (1/dy)*Hinvy;   Hinvz = (1/dz)*Hinvz;
@@ -97,5 +97,5 @@ A = D2yplusD2z + ...
 [M.L,M.U,M.P,M.Q,M.R] = lu(A);
 
 
-  
+  keyboard
  
