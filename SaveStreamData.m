@@ -1,7 +1,5 @@
 function varargout = SaveStreamData(fn,varargin)
 
-%written by Andrew Bradley (ambradl@sandia.gov)
-
 % Functions to save a stream of data to a file. The data should be
 % column-oriented, so that one is building a wide matrix by appending colums.
 % 
@@ -31,6 +29,11 @@ function varargout = SaveStreamData(fn,varargin)
 %   ridxs=[] if you want to specifiy isStride but not ridxs.
 %
 % See the function 'Test' below for an example.
+%
+% AMB ambrad@cs.stanford.edu
+% CDFM, Geophysics, Stanford
+% Open Source Initiative OSI - Eclipse Public License 1.0
+% http://www.opensource.org/licenses/eclipse-1.0
 
   [varargout{1:nargout}] = feval(fn,varargin{:});
   
