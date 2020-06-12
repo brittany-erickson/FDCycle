@@ -97,5 +97,5 @@ A = D2yplusD2z + ...
 [M.L,M.U,M.P,M.Q,M.R] = lu(A);
 
 
-  keyboard
+
  

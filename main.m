@@ -73,7 +73,7 @@ ssd = initialize_fields(path,slip,state,t);
 
 options = odeset('OutputFcn', @save_stream,'reltol',1e-9,'abstol',1e-9,'InitialStep',1e1);
 
-tf = 1000*31556926; %total simulation time in seconds (years*31556926)
+tf = 3000*31556926; %total simulation time in seconds (years*31556926)
 ode45(@matlabRK_Fun,[0 tf],w,options,D,M,p,tf);
 
 

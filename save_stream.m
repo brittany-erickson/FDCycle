@@ -6,8 +6,11 @@ global gs;
 global ssd;
 
 
-%plot(D.z,w(1:D.Nz,end))
-%pause(1e-6)
+subplot(3,1,1), plot(D.z,w(1:D.Nz,end))
+subplot(3,1,2), plot(D.z,gs.V_n)
+subplot(3,1,3), plot(D.z,gs.tau)
+t(end)./31556926
+pause(1e-6)
 
 if (mod(gs.ctr, gs.save_stride) == 0)
     if isempty(t) == 0
