@@ -15,18 +15,14 @@ N = D.Nz; z = D.z;
 z = z(1:mm);
 %ind = find_indices();  %find indices where max(V) > 1e-3 m/s
 
-W0 = SaveStreamData('Read','slip_old.dat');
-T0 = SaveStreamData('Read','Time_old.dat');
-V0 = SaveStreamData('Read','Vel_old.dat');
-
-W1 = SaveStreamData('Read','./scratch/slip.dat');
-T1 = SaveStreamData('Read','./scratch/Time.dat');
-V1 = SaveStreamData('Read','./scratch/Vel.dat');
+W = SaveStreamData('Read','data/slip.dat');
+T = SaveStreamData('Read','data/Time.dat');
+V = SaveStreamData('Read','data/Vel.dat');
 
 
-V = [V0(1:mm,:) V1(1:mm,2:end)];
-T = [T0 T1(2:end)];
-W = [W0(1:mm,:) W1(1:mm,2:end)];
+V = V(1:mm,:);
+
+W = W(1:mm,:);
 ind = find_indices(V);  %find indices where max(V) > 1e-3 m/s
 
 
@@ -34,7 +30,7 @@ V = 10.^(V);
 
 sw = size(W); lw = sw(2); sv = size(V); lv = sv(2); [m] = min(lw,min(lv,length(T))) - 1;
 
-stride_space = 10;
+stride_space = 1;
 W = W(1:stride_space:mm,:);
 T = T(1:end);
 V = V(1:stride_space:end,:);
