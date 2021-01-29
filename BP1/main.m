@@ -1,6 +1,8 @@
 clear all
 format long
 
+
+% this is Brittany adding a comment
 %% set up files to write data to
 %set up files to write data to
 path = './data/';
